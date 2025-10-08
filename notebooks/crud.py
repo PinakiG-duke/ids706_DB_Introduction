@@ -23,7 +23,7 @@ def run_sql_file(filename, params=None):
     if not q:
         raise ValueError(f"{filename} is empty.")
     if params:
-        # executescript doesn't accept params; use execute when you *do* pass params
+
         conn.execute(q, params)
     else:
         conn.executescript(q)
